@@ -1,0 +1,13 @@
+<h1><strong>Welcome to Bar 497 🍸🍻</strong></h1>
+<p>Here's everyone's favorite drinks...</p>
+
+<ol>
+<% @cocktails.each do |cocktail| %>
+  <li><%= link_to cocktail.name, cocktail_path(id: cocktail.id)%>
+  <% end%>
+</ol>
+
+<br>
+<button class="btn">
+  <%= link_to "Add new cocktail", new_cocktail_path %>
+</button>

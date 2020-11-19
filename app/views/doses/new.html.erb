@@ -1,0 +1,14 @@
+<h1><strong>How to make <%= @cocktail.name %></strong></h1>
+
+<%#= f.submit "Add this cocktail", class: "btn btn-primary" %>
+
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.input :description %>
+    <%= f.association :ingredient %>
+  <%= f.button :submit %>
+<% end %>
+
+
+
+
+
