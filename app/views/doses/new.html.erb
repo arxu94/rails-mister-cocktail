@@ -4,11 +4,13 @@
 
 <%= simple_form_for [@cocktail, @dose] do |f| %>
     <%= f.input :description %>
-    <%= f.association :ingredient %>
+    <%= f.association :ingredient, input_html: { class: "beautiful-dropdown" }, include_hidden: false %>
   <%= f.button :submit %>
 <% end %>
 
 
 
-
-
+<br>
+<button class="btn">
+  <%= link_to "🔙 Back to all cocktails", cocktails_path %>
+</button>

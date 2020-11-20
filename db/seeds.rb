@@ -16,3 +16,15 @@ ingredient_name = name['strIngredient1']
 i = Ingredient.create!(name: ingredient_name)
 puts "Added #{i.name}!"
 end
+
+# cocktailurl = "https://www.allrecipes.com/search/?wt=cocktail"
+# cocktail_list = open(url).read
+# # p html_file
+# cocktail = JSON.parse(cocktail_list)
+# cocktail_array = cocktail["drinks"]
+
+# ingredients_array.each do |name|
+# ingredient_name = name['strIngredient1']
+# i = Ingredient.create!(name: ingredient_name)
+# puts "Added #{i.name}!"
+# end

@@ -1,25 +1,32 @@
+<div class="container" style="margin-top: 10px">
 <h1><strong><%= @cocktail.name %></strong></h1>
-<p>Yummy yummy 🤤</p>
+<h2>Yummy yummy 🤤</h2><br>
 
-<h2>Here's what you need to make it!</h2>
+<strong><p>Here's what you need to make it!</p></strong>
 <!-- loop through the doses/ingredients and list them here -->
 <% @cocktail.doses.each do|dose| %>
-<% dose[0].ingredient_id%>
-<!-- Cocktail.find(5).doses[0].ingredient_id -->
+<br>☑️<%= dose.description %> of <%= dose.ingredient.name %>
+<%#= Cocktail.find(@cocktail.id).doses[0].ingredient_id %>
+<%= link_to " 🗑 Delete this dosage", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %>
 <% end %>
-<p><%#= Ingredient.find(@cocktail.doses[0].ingredient_id).name %></p>
 
+
+
+
+<!-- <p><%#= Ingredient.find(@cocktail.doses[0].ingredient_id).name %></p>
+ -->
 
 
 
 
 <br>
 <button class="btn">
-  <%= link_to "Back to all cocktails", cocktails_path %>
+  <%= link_to "🔙 Back to all cocktails", cocktails_path %>
 </button>
 
 <br>
 <button class="btn">
-  <%= link_to "Add dosage for this cocktail", new_cocktail_dose_path(@cocktail) %>
+  <%= link_to "➕ Add dosage for this cocktail", new_cocktail_dose_path(@cocktail) %>
 </button>
 
+</div>

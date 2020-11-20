@@ -1,0 +1,29 @@
+.banner {
+  color: white;
+  text-align: center;
+  height: 50vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover;
+  display: flex;
+  // align-items: left;
+  // justify-content: left;
+  margin-bottom: 32px;
+  flex-direction: column;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.banner h1 {
+font-family: 'Arimo', sans-serif;
+  font-size: 45px;
+  margin: 10px;
+}
+
+.banner p {
+  font-family: 'Arimo', sans-serif;
+  font-size: 25px;
+  font-weight: lighter;
+  color: white;
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
