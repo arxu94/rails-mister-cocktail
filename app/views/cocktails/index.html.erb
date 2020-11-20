@@ -8,6 +8,8 @@
     <% @cocktails.each do |cocktail| %>
       <div class="col-12">
         <div class="card-white" style="background-image: url('cocktails-banner.jpg');">
+          <%= cl_image_tag(cocktail.photo.key,
+      width: 400, height: 300, crop: :fill) %>
         <h2><strong><%= link_to cocktail.name, cocktail_path(id: cocktail.id)%></strong></h2>
         </div>
       </div>

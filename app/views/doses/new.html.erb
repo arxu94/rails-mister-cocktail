@@ -1,7 +1,9 @@
-<h1><strong>How to make <%= @cocktail.name %></strong></h1>
+<div class="banner" style="background-image: url('<%= image_path 'cocktails.jpg' %>');">
+<h1 style="font-family: 'Pacifico', serif"><strong>How to make <%= @cocktail.name %></strong></h1>
+</div>
 
 <%#= f.submit "Add this cocktail", class: "btn btn-primary" %>
-
+<div class="container">
 <%= simple_form_for [@cocktail, @dose] do |f| %>
     <%= f.input :description %>
     <%= f.association :ingredient, input_html: { class: "beautiful-dropdown" }, include_hidden: false %>
@@ -14,3 +16,4 @@
 <button class="btn">
   <%= link_to "🔙 Back to all cocktails", cocktails_path %>
 </button>
+</div>

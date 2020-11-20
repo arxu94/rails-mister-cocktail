@@ -3,8 +3,10 @@
 <h1><strong>What's your favorite cocktail?</strong></h1>
 
 <%= simple_form_for(@cocktail)do |f| %>
-  <div class="form-inputs">
+  <div class="form-inputs" style="font-family: 'Arimo', sans-serif">
     <%= f.input :name %>
+    <%= f.input :photo, as: :file %>
+
   </div>
 
 <%= f.submit "Add this cocktail", class: "btn btn-primary" %>
